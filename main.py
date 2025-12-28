@@ -3,7 +3,7 @@ from app import routes
 
 app = FastAPI()
 
-# يمكن إضافة المزيد من الـ routes لاحقًا
+
 app.include_router(routes.router)
 
 if __name__ == "__main__":

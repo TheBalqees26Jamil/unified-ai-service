@@ -1,4 +1,4 @@
-# هنا يمكن تعريف أي موديلات لاحقًا باستخدام Pydantic
+
 from pydantic import BaseModel , Field
 
 class Item(BaseModel):
