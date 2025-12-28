@@ -16,7 +16,7 @@ It allows clients to send requests and receive responses in JSON format.
 
 
 ## Structure 
-
+```
 unified-ai-service/
 │
 ├─ main.py
@@ -25,3 +25,4 @@ unified-ai-service/
    ├─ routes.py
    ├─ services.py
    └─ models.py
+```
