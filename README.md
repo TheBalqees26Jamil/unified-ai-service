@@ -1,11 +1,11 @@
-Unified AI Service
+## Unified AI Service
 
 Unified AI Service is a simple backend application that provides AI-powered services through a RESTful API.
 It allows clients to send requests and receive responses in JSON format.
 
 This project demonstrates proper backend development practices, including Git workflow, RESTful API design, clean code structure, and Docker-based deployment.
 
-Project Objectives
+## Project Objectives
 
 Build a working RESTful API using FastAPI
 
@@ -15,7 +15,7 @@ Ensure clean, readable, and maintainable code
 
 Prepare the application for containerized deployment using Docker
 
-Development Workflow (Step by Step)
+## Development Workflow (Step by Step)
 1. Project Initialization
 
 Created the project locally using PyCharm
