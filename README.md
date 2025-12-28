@@ -14,3 +14,14 @@ It allows clients to send requests and receive responses in JSON format.
 2. Follow the instructions in the Dockerfile or backend setup to run the service
 3. Use the API endpoints to interact with the AI service
 
+
+## Structure 
+
+unified-ai-service/
+│
+├─ main.py
+├─ README.md
+└─ app/
+   ├─ routes.py
+   ├─ services.py
+   └─ models.py
