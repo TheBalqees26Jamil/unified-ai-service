@@ -128,6 +128,22 @@ Add environment variables
 Extend API functionality if required
 
 
+## Docker Concepts
+
+### Docker Image
+A Docker Image is a blueprint that contains everything required to run the application,
+including the base operating system, Python runtime, dependencies, and application code.
+An image does not run by itself.
+
+### Docker Container
+A Docker Container is a running instance of a Docker Image.
+Multiple containers can be created from the same image.
+
+Image → Blueprint  
+Container → Running instance
+
+
+
 ###________________________
 ##_________________________
 
@@ -212,6 +228,19 @@ Extend API functionality if required
 
 أي ميزة إضافية يتم تنفيذها فقط إذا كانت مطلوبة رسميًا 
 
+## مفاهيم Docker
+
+### Docker Image
+الـ Docker Image هي قالب يحتوي على كل ما يحتاجه التطبيق للتشغيل،
+بما في ذلك نظام التشغيل المصغّر، بيئة بايثون، المكتبات، وكود التطبيق.
+ولا تعمل بمفردها.
+
+### Docker Container
+الـ Docker Container هو نسخة شغّالة من الـ Image.
+يمكن تشغيل أكثر من Container من نفس الـ Image.
+
+Image → قالب  
+Container → نسخة تعمل فعليًا
 
 
 
