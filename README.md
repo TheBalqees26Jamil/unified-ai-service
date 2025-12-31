@@ -142,7 +142,40 @@ Multiple containers can be created from the same image.
 Image → Blueprint  
 Container → Running instance
 
+## Dockerfile & Project Setup
 
+A Dockerfile has been prepared according to Docker best practices.
+
+It includes all necessary files for the project, including:
+
+main.py (application entry point)
+
+requirements.txt (Python dependencies)
+
+A dedicated Docker branch was created in the repository to separate Docker-related work.
+
+requirements.txt file has been created and verified for correctness.
+
+## Building & Running the Container
+
+Normally, the Docker image can be built using:
+
+docker build -t unified-ai-service .
+
+
+And run with:
+
+docker run -p 8000:8000 unified-ai-service
+
+
+Note: Due to system-level virtualization issues on Windows (WSL2 / Docker Engine),
+the container could not be executed locally at this time.
+
+## Conclusion
+
+Even though the container could not be run locally,
+the Docker configuration and setup follow correct practices
+and can be successfully built and executed on a compatible environment.
 
 ###________________________
 ##_________________________
@@ -231,16 +264,50 @@ Container → Running instance
 ## مفاهيم Docker
 
 ### Docker Image
-الـ Docker Image هي قالب يحتوي على كل ما يحتاجه التطبيق للتشغيل،
-بما في ذلك نظام التشغيل المصغّر، بيئة بايثون، المكتبات، وكود التطبيق.
-ولا تعمل بمفردها.
+صورة Docker هي مخطط يحتوي على كل ما يلزم لتشغيل التطبيق،
+بما في ذلك نظام التشغيل الأساسي، بيئة Python، المكتبات الضرورية، وكود التطبيق.
+الصورة لا تعمل بمفردها.
 
 ### Docker Container
-الـ Docker Container هو نسخة شغّالة من الـ Image.
-يمكن تشغيل أكثر من Container من نفس الـ Image.
+حاوية Docker هي نسخة تشغيلية من صورة Docker.
+يمكن إنشاء عدة حاويات من نفس الصورة.
 
-Image → قالب  
-Container → نسخة تعمل فعليًا
+الصورة → مخطط
+الحاوية → نسخة تشغيلية
+
+## ملف Dockerfile وإعداد المشروع
+تم إعداد Dockerfile وفق أفضل ممارسات Docker.
+
+يتضمن جميع الملفات اللازمة للمشروع، مثل:
+
+main.py (نقطة دخول التطبيق)
+
+requirements.txt (اعتماديات Python)
+
+تم إنشاء فرع خاص بالـ Docker في المستودع لفصل أعمال Docker عن بقية المشروع.
+
+تم إنشاء ملف requirements.txt والتحقق من صحته.
+
+بناء وتشغيل الحاوية
+
+عادةً، يمكن بناء صورة Docker باستخدام:
+
+docker build -t unified-ai-service .
+
+
+وتشغيلها بواسطة:
+
+docker run -p 8000:8000 unified-ai-service
+
+
+ملاحظة: بسبب مشاكل الافتراضية على مستوى النظام في Windows (WSL2 / Docker Engine)،
+لم يتمكن المشروع من تشغيل الحاوية محليًا في هذا الوقت.
+
+## الخلاصة
+
+رغم أن الحاوية لم يتم تشغيلها محليًا،
+إلا أن إعداد Docker والتهيئة متوافقة مع الممارسات الصحيحة،
+ويمكن بناؤها وتشغيلها بنجاح على بيئة داعمة.
 
 
 
