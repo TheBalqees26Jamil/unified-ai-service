@@ -99,6 +99,7 @@ Docker-ready backend service
 ```
 unified-ai-service/
 │
+├─ requirements.txt
 ├─ main.py                  # Application entry point
 ├─ README.md                # Project documentation
 └─ app/
