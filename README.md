@@ -16,6 +16,7 @@ Ensure clean, readable, and maintainable code
 Prepare the application for containerized deployment using Docker
 
 ## Development Workflow (Step by Step)
+
 1. Project Initialization
 
 Created the project locally using PyCharm
@@ -96,6 +97,7 @@ GitHub-based development workflow
 Docker-ready backend service
 
 ## Structure 
+
 ```
 unified-ai-service/
 │
@@ -107,18 +109,15 @@ unified-ai-service/
    └─ models.py             # Data models and schemas
 
 ```
-## Running the Project (Without Docker)
 
-Clone the repository
+## Running the Project with Docker
 
-Install required dependencies
+1. Docker Image has been built: `myapp:latest`.
+2. Container is running with the application accessible on `http://0.0.0.0:8000`.
+3. Environment variables are loaded from `.env` file inside the container.
 
-Run the FastAPI application
-
-Open:
-
-http://127.0.0.1:8000/docs for API documentation
-
+Future Improvements:
+- Extend API functionality if required
 
 ## Docker Concepts
 
@@ -162,7 +161,6 @@ The application runs inside the Docker container and is accessible via:
 http://localhost:8000
 
 A successful response was returned from the running container, confirming correct Docker setup.
-
 
 ## Conclusion
 
@@ -253,6 +251,14 @@ The project is now Docker-ready and can be executed inside a container environme
 هذا المشروع يركّز على التنفيذ الصحيح وليس التعقيد
 
 أي ميزة إضافية يتم تنفيذها فقط إذا كانت مطلوبة رسميًا 
+
+## شغيل المشروع باستخدام Docker
+
+تم بناء Docker Image باسم: myapp:latest.
+
+الحاوية تعمل الآن والتطبيق متاح على: http://0.0.0.0:8000.
+
+تم تحميل Environment Variables من ملف .env داخل الحاوية.
 
 ## مفاهيم Docker
 
