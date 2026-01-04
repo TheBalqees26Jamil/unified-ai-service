@@ -16,6 +16,7 @@ Ensure clean, readable, and maintainable code
 Prepare the application for containerized deployment using Docker
 
 ## Development Workflow (Step by Step)
+
 1. Project Initialization
 
 Created the project locally using PyCharm
@@ -96,6 +97,7 @@ GitHub-based development workflow
 Docker-ready backend service
 
 ## Structure 
+
 ```
 unified-ai-service/
 │
@@ -108,26 +110,15 @@ unified-ai-service/
    └─ models.py             # Data models and schemas
 
 ```
-## Running the Project (Without Docker)
 
-Clone the repository
+## Running the Project with Docker
 
-Install required dependencies
+1. Docker Image has been built: `myapp:latest`.
+2. Container is running with the application accessible on `http://0.0.0.0:8000`.
+3. Environment variables are loaded from `.env` file inside the container.
 
-Run the FastAPI application
-
-Open:
-
-http://127.0.0.1:8000/docs for API documentation
-
-## Future Improvements
-
-Complete Docker containerization
-
-Add environment variables
-
-Extend API functionality if required
-
+Future Improvements:
+- Extend API functionality if required
 
 ## Docker Concepts
 
@@ -149,9 +140,8 @@ A Dockerfile has been prepared according to Docker best practices.
 
 It includes all necessary files for the project, including:
 
-main.py (application entry point)
-
-requirements.txt (Python dependencies)
+- main.py (application entry point)
+- requirements.txt (Python dependencies)
 
 A dedicated Docker branch was created in the repository to separate Docker-related work.
 
@@ -159,24 +149,25 @@ requirements.txt file has been created and verified for correctness.
 
 ## Building & Running the Container
 
-Normally, the Docker image can be built using:
+The Docker image was successfully built locally using the following command:
 
-docker build -t unified-ai-service .
+docker build -t myapp:latest .
 
+To run the container:
 
-And run with:
+docker run -p 8000:8000 myapp:latest
 
-docker run -p 8000:8000 unified-ai-service
+The application runs inside the Docker container and is accessible via:
 
+http://localhost:8000
 
-Note: Due to system-level virtualization issues on Windows (WSL2 / Docker Engine),
-the container could not be executed locally at this time.
+A successful response was returned from the running container, confirming correct Docker setup.
 
 ## Conclusion
 
-Even though the container could not be run locally,
-the Docker configuration and setup follow correct practices
-and can be successfully built and executed on a compatible environment.
+The Docker image has been successfully created using a valid Dockerfile and requirements file.
+
+The project is now Docker-ready and can be executed inside a container environment on any compatible system.
 
 ###________________________
 ##_________________________
@@ -200,7 +191,7 @@ and can be successfully built and executed on a compatible environment.
 تجهيز التطبيق للتشغيل باستخدام Docker 
 
 
-##تسلسل العمل
+## تسلسل العمل
 1. إنشاء المشروع
 
 إنشاء المشروع محليًا باستخدام PyCharm
@@ -249,9 +240,9 @@ and can be successfully built and executed on a compatible environment.
 
 جعل الكود سهل القراءة والصيانة
 
-6. Docker (الخطوة القادمة)
+6. Docker 
 
-سيتم استخدام Docker لتشغيل التطبيق داخل Container
+ استخدام Docker لتشغيل التطبيق داخل Container
 
 هذا يضمن تشغيلًا ثابتًا وسهل النقل
 
@@ -261,6 +252,14 @@ and can be successfully built and executed on a compatible environment.
 هذا المشروع يركّز على التنفيذ الصحيح وليس التعقيد
 
 أي ميزة إضافية يتم تنفيذها فقط إذا كانت مطلوبة رسميًا 
+
+## شغيل المشروع باستخدام Docker
+
+تم بناء Docker Image باسم: myapp:latest.
+
+الحاوية تعمل الآن والتطبيق متاح على: http://0.0.0.0:8000.
+
+تم تحميل Environment Variables من ملف .env داخل الحاوية.
 
 ## مفاهيم Docker
 
@@ -281,35 +280,36 @@ and can be successfully built and executed on a compatible environment.
 
 يتضمن جميع الملفات اللازمة للمشروع، مثل:
 
-main.py (نقطة دخول التطبيق)
+main.py (نقطة تشغيل التطبيق)
 
-requirements.txt (اعتماديات Python)
+requirements.txt (مكتبات بايثون المطلوبة)
 
 تم إنشاء فرع خاص بالـ Docker في المستودع لفصل أعمال Docker عن بقية المشروع.
 
-تم إنشاء ملف requirements.txt والتحقق من صحته.
+كما تم إنشاء ملف requirements.txt والتأكد من صحته.
 
-بناء وتشغيل الحاوية
+##  بناء وتشغيل الحاوية
 
-عادةً، يمكن بناء صورة Docker باستخدام:
+تم بنجاح إنشاء Docker Image محليًا باستخدام الأمر التالي:
 
-docker build -t unified-ai-service .
+docker build -t myapp:latest .
+
+ولتشغيل الحاوية:
+
+docker run -p 8000:8000 myapp:latest
 
 
-وتشغيلها بواسطة:
+ويعمل التطبيق داخل الحاوية ويمكن الوصول إليه من المتصفح عبر:
 
-docker run -p 8000:8000 unified-ai-service
+http://localhost:8000
 
+تم التأكد من نجاح التشغيل من خلال استقبال استجابة صحيحة من التطبيق.
 
-ملاحظة: بسبب مشاكل الافتراضية على مستوى النظام في Windows (WSL2 / Docker Engine)،
-لم يتمكن المشروع من تشغيل الحاوية محليًا في هذا الوقت.
 
 ## الخلاصة
+تم إنشاء Docker Image بنجاح باستخدام Dockerfile وملف المتطلبات بشكل صحيح.
 
-رغم أن الحاوية لم يتم تشغيلها محليًا،
-إلا أن إعداد Docker والتهيئة متوافقة مع الممارسات الصحيحة،
-ويمكن بناؤها وتشغيلها بنجاح على بيئة داعمة.
-
+أصبح المشروع الآن جاهزًا للتشغيل داخل حاوية Docker وعلى أي نظام يدعم Docker.
 
 
 
