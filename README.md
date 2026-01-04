@@ -148,9 +148,8 @@ A Dockerfile has been prepared according to Docker best practices.
 
 It includes all necessary files for the project, including:
 
-main.py (application entry point)
-
-requirements.txt (Python dependencies)
+- main.py (application entry point)
+- requirements.txt (Python dependencies)
 
 A dedicated Docker branch was created in the repository to separate Docker-related work.
 
@@ -158,24 +157,26 @@ requirements.txt file has been created and verified for correctness.
 
 ## Building & Running the Container
 
-Normally, the Docker image can be built using:
+The Docker image was successfully built locally using the following command:
 
-docker build -t unified-ai-service .
+docker build -t myapp:latest .
 
+To run the container:
 
-And run with:
+docker run -p 8000:8000 myapp:latest
 
-docker run -p 8000:8000 unified-ai-service
+The application runs inside the Docker container and is accessible via:
 
+http://localhost:8000
 
-Note: Due to system-level virtualization issues on Windows (WSL2 / Docker Engine),
-the container could not be executed locally at this time.
+A successful response was returned from the running container, confirming correct Docker setup.
+
 
 ## Conclusion
 
-Even though the container could not be run locally,
-the Docker configuration and setup follow correct practices
-and can be successfully built and executed on a compatible environment.
+The Docker image has been successfully created using a valid Dockerfile and requirements file.
+
+The project is now Docker-ready and can be executed inside a container environment on any compatible system.
 
 ###________________________
 ##_________________________
@@ -280,35 +281,36 @@ and can be successfully built and executed on a compatible environment.
 
 يتضمن جميع الملفات اللازمة للمشروع، مثل:
 
-main.py (نقطة دخول التطبيق)
+main.py (نقطة تشغيل التطبيق)
 
-requirements.txt (اعتماديات Python)
+requirements.txt (مكتبات بايثون المطلوبة)
 
 تم إنشاء فرع خاص بالـ Docker في المستودع لفصل أعمال Docker عن بقية المشروع.
 
-تم إنشاء ملف requirements.txt والتحقق من صحته.
+كما تم إنشاء ملف requirements.txt والتأكد من صحته.
 
-بناء وتشغيل الحاوية
+##  بناء وتشغيل الحاوية
 
-عادةً، يمكن بناء صورة Docker باستخدام:
+تم بنجاح إنشاء Docker Image محليًا باستخدام الأمر التالي:
 
-docker build -t unified-ai-service .
+docker build -t myapp:latest .
+
+ولتشغيل الحاوية:
+
+docker run -p 8000:8000 myapp:latest
 
 
-وتشغيلها بواسطة:
+ويعمل التطبيق داخل الحاوية ويمكن الوصول إليه من المتصفح عبر:
 
-docker run -p 8000:8000 unified-ai-service
+http://localhost:8000
 
+تم التأكد من نجاح التشغيل من خلال استقبال استجابة صحيحة من التطبيق.
 
-ملاحظة: بسبب مشاكل الافتراضية على مستوى النظام في Windows (WSL2 / Docker Engine)،
-لم يتمكن المشروع من تشغيل الحاوية محليًا في هذا الوقت.
 
 ## الخلاصة
+تم إنشاء Docker Image بنجاح باستخدام Dockerfile وملف المتطلبات بشكل صحيح.
 
-رغم أن الحاوية لم يتم تشغيلها محليًا،
-إلا أن إعداد Docker والتهيئة متوافقة مع الممارسات الصحيحة،
-ويمكن بناؤها وتشغيلها بنجاح على بيئة داعمة.
-
+أصبح المشروع الآن جاهزًا للتشغيل داخل حاوية Docker وعلى أي نظام يدعم Docker.
 
 
 
