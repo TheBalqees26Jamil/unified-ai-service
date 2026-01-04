@@ -119,14 +119,6 @@ Open:
 
 http://127.0.0.1:8000/docs for API documentation
 
-## Future Improvements
-
-Complete Docker containerization
-
-Add environment variables
-
-Extend API functionality if required
-
 
 ## Docker Concepts
 
@@ -200,7 +192,7 @@ The project is now Docker-ready and can be executed inside a container environme
 تجهيز التطبيق للتشغيل باستخدام Docker 
 
 
-##تسلسل العمل
+## تسلسل العمل
 1. إنشاء المشروع
 
 إنشاء المشروع محليًا باستخدام PyCharm
@@ -249,9 +241,9 @@ The project is now Docker-ready and can be executed inside a container environme
 
 جعل الكود سهل القراءة والصيانة
 
-6. Docker (الخطوة القادمة)
+6. Docker 
 
-سيتم استخدام Docker لتشغيل التطبيق داخل Container
+ استخدام Docker لتشغيل التطبيق داخل Container
 
 هذا يضمن تشغيلًا ثابتًا وسهل النقل
 
